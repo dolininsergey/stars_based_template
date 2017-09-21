@@ -53,13 +53,29 @@ body
 
 // The Beginning
 
+// colors for posts tags 
+.blue-tag
+	background-color: $blue-tag
+.red-tag
+	background-color: $red-tag
+.black-tag
+	background-color: #000
+.green-tag
+	background-color: $green-tag
+.purple-tag
+	background-color: $purple-tag
+
+.slider-item, .content-single, .contact-wrapper
+	background-size: cover
+	background-position: center
+
 .site-header
 	height: 100vh
 	position: relative
 	.menu-wrapper
 		padding: 0
 		background-color: #fff
-		border-bottom: solid 1px #000
+		//border-bottom: solid 1px #000
 		position: absolute
 		width: 100%
 		z-index: 2
@@ -72,7 +88,6 @@ body
 			ul
 				list-style-type: none
 		.menu-logo
-			//background-color: $blue-tag
 			font-size: 14px
 			display: flex
 			justify-content: flex-end
@@ -93,17 +108,34 @@ body
 				display: flex
 				padding: 0
 				margin: 0
+				//background-color: yellow
 				li
 					margin-right: 25px
+					&:first-child
+						margin-right: 10px
 				a
 					color: $grey
 					font-size: 18px
 					&:hover
 						text-decoration: none
+						color: #272420
+						transition: color .40s ease
 				.fa
 					font-size: 20px
+					&:hover
+						color: $blue-tag
+						transition: color .80s ease
+						cursor: pointer
+						opacity: 0.8
 				.no-margin
 					margin: 0px
+				input
+					border-radius: 10em
+					border: solid 1px #dedede
+					outline: none
+					padding-left: 20px
+					display: none
+					width: 250px
 		.long-menu
 			background-color: #fff
 			color: #fff
@@ -113,7 +145,8 @@ body
 				display: flex
 				padding: 0
 				flex-wrap: wrap
-				justify-content: space-between
+				justify-content: space-around
+				//justify-content: flex-end
 				li
 					//margin-right: 35px
 				a
@@ -121,30 +154,46 @@ body
 					font-size: 18px
 					&:hover
 						text-decoration: none
+						color: #272420
+						transition: color .40s ease
 				.no-margin
 					margin: 0px
 				.fa 
 					font-size: 20px
 					color: $blue-tag
 					margin-top: 7px
-
+.item-tag
+	font-size: 18px
+	color: #fff
+	padding: 1px 20px
 // Owl Carousel
+.no-js .owl-carousel, .owl-carousel.owl-loaded
+	display: flex
 .owl-carousel
+	position: relative
+	align-items: center
 	.owl-item
 		.slider-item
 			height: 100vh
-			background-size: cover
-			background-position: center
+			// background-size: cover
+			// background-position: center
 			display: flex
 			align-items: center
 			justify-content: center
 			position: relative
 			opacity: 0.95
 			.slider-item-text
+				//width: 100%
 				text-align: center
 				color: #fff
 				font-size: 2.25rem
 				font-family: serif
+				padding: 1% 10%
+				//background-color: rgba(0, 0, 0, 0.1)
+				&:hover 
+					background-color: rgba(0, 0, 0, 0.8)
+					transition: background-color .40s ease
+					cursor: pointer
 			.post-info
 				font-family: sans
 				position: absolute
@@ -154,15 +203,28 @@ body
 				justify-content: space-between
 				padding: 0 13% 2% 13%
 				.item-tag
-					font-size: 18px
-					color: #fff
-					//font-weight: bold
-					padding: 1px 20px
-					background-color: $blue-tag
-					//align-self: flex-start
+					//background-color: $blue-tag
 			.data-author
 				font-size: 16px
 				color: #fff
+	.owl-nav
+		position: absolute
+		width: 100%
+		> div
+			width: 50px
+			height: 50px
+			color: #171717
+			position: absolute
+			line-height: 58px
+			font-size: 30px
+			background-color: #fff
+			display: flex
+			align-items: center
+			justify-content: center
+			&.owl-prev
+				left: 0
+			&.owl-next
+				right: 0
 
 // Toggle Menu Button
 .toggle-mnu 
@@ -170,5 +232,173 @@ body
 
 .fa-caret-down
 	font-size: 27px
+
+// Content
+.over-dark
+	position: absolute
+	background-color: rgba(0, 0, 0, 0.15) // looks pretty nice with 0.07 as well
+	min-width: 100%
+	min-height: 100%
+
+.content-wrapper
+	padding-top: 2%
+	.content
+		display: flex
+		flex-direction: column
+		.data-author
+			font-size: 14px
+			color: #B0B0B0
+		.content-single
+			min-height: 340px
+			// background-size: cover
+			// background-position: center
+			-webkit-box-shadow: inset 30px 30px 85px rgba(0,0,0,0.8);
+			-moz-box-shadow:    inset 30px 30px 85px rgba(0,0,0,0.8);
+			box-shadow:         inset 30px 30px 85px rgba(0,0,0,0.8);
+			display: flex
+			justify-content: flex-end
+			flex-direction: column
+			.single-text
+				color: #fff
+				width: 100%
+				text-align: center
+				font-family: serif
+				.single-header
+					a
+						font-size: 48px
+						color: #fff
+						&:hover
+							text-decoration: none
+							opacity: 0.8
+							transition: opacity .40s ease
+				.single-description
+					font-size: 20px
+			.post-info
+				font-family: sans
+				//position: absolute
+				display: flex
+				//align-self: flex-end
+				width: 100%
+				justify-content: space-between
+				// padding-top: 3%
+				// padding-bottom: 3%
+				padding: 3% 4% 3% 0%;
+				.data-author
+					color: #B0B0B0
+			.data-author
+				font-size: 16px
+				color: #fff
+		.content-several, .content-single
+			//background-color: red
+			margin-bottom: 5%
+			.content-item
+				.cont-item-description
+					font-family: serif
+					line-height: 1.4
+					margin-top: 15px
+					margin-bottom: 15px
+					a
+						text-decoration: none
+						color: #000
+						font-size: 22px // default 24px
+						&:hover
+							opacity: 0.8
+							transition: opacity .40s ease
+				.cont-item-image
+					//max-height: 245px
+					overflow: hidden
+					position: relative
+					display: flex
+					//opacity: 0.8
+					// background-size: cover
+					// background-position: center
+					//background-color: rgba(10, 11, 18, 0.8)
+
+					// img
+					// 	max-width: 100%
+					// 	max-height: 100%
+
+				.item-tag
+					position: absolute
+					align-self: flex-end
+					margin-top: -25px
+			.content-several
+				display: flex
+				justify-content: space-around
+.content-single
+	.cont-item-image
+		min-height: 350px
+
+.content-2
+	.content-item
+		.cont-item-image
+			max-height: 245px
+
+.content-3
+	.content-item
+		.cont-item-image
+			max-height: 220px
+
+.contact-wrapper
+	// background-size: cover
+	// background-position: center
+	background-repeat: repeat-y
+	color: #fff
+	text-align: center
+	font-family: serif
+	// padding-top: 5%
+	// padding-bottom: 5%
+	min-height: 330px
+	display: flex
+	flex-direction: column
+	justify-content: center
+
+	.contact-header
+		font-size: 48px
+	.contact-description
+		font-size: 24px
+
+.button
+	display: inline-block
+	border: none
+	color: $blue-tag
+	text-decoration: none
+	background-color: #fff
+	padding: 10px 35px
+	margin-top: 2%
+	font-size: 17px
+	font-family: sans
+	font-weight: bold
+	letter-spacing: 2px
+	border-radius: 10em
+	text-align: center
+	position: relative
+	outline: none
+	cursor: pointer
+	&:focus, &:hover
+		text-decoration: none
+		color: $blue-tag
+		font-size: 18px
+		// opacity: 0.8
+		// transition: opacity .40s ease
+
+.footer
+	display: flex
+	flex-direction: column
+	justify-content: center
+	min-height: 200px
+	color: #B0B0B0
+	text-align: center
+	font-family: sans
+	font-size: 18px
+	color: #B3B8C5
+	a
+		color: #A7ACBC
+		font-weight: bold
+		font-size: 19px
+		// &:hover
+		// 	text-decoration: none
+
+
 
 @import "media" // Всегда в конце
