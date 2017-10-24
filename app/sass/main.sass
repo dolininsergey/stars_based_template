@@ -115,7 +115,7 @@ body
 						margin-right: 10px
 				a
 					color: $grey
-					font-size: 18px
+					font-size: 16px
 					&:hover
 						text-decoration: none
 						color: #272420
@@ -151,7 +151,7 @@ body
 					//margin-right: 35px
 				a
 					color: $blue-tag
-					font-size: 18px
+					font-size: 16px
 					&:hover
 						text-decoration: none
 						color: #272420
@@ -163,7 +163,7 @@ body
 					color: $blue-tag
 					margin-top: 7px
 .item-tag
-	font-size: 18px
+	font-size: 16px
 	color: #fff
 	padding: 1px 20px
 // Owl Carousel
@@ -187,7 +187,7 @@ body
 				text-align: center
 				color: #fff
 				font-size: 2.25rem
-				font-family: serif
+				font-family: sans
 				padding: 1% 10%
 				//background-color: rgba(0, 0, 0, 0.1)
 				&:hover 
@@ -205,14 +205,14 @@ body
 				.item-tag
 					//background-color: $blue-tag
 			.data-author
-				font-size: 16px
+				font-size: 15px
 				color: #fff
 	.owl-nav
 		position: absolute
 		width: 100%
 		> div
-			width: 50px
-			height: 50px
+			width: 30px
+			height: 30px
 			color: #171717
 			position: absolute
 			line-height: 58px
@@ -225,6 +225,8 @@ body
 				left: 0
 			&.owl-next
 				right: 0
+			.fa 
+				font-size: 24px
 
 // Toggle Menu Button
 .toggle-mnu 
@@ -242,90 +244,90 @@ body
 
 .content-wrapper
 	padding-top: 2%
-	.content
+	width: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+
+.content
+	display: flex
+	flex-direction: column
+	.data-author
+		font-size: 13px
+		color: #B0B0B0
+	.content-single
+		min-height: 340px
+		// background-size: cover
+		// background-position: center
+		-webkit-box-shadow: inset 30px 30px 85px rgba(0,0,0,0.8);
+		-moz-box-shadow:    inset 30px 30px 85px rgba(0,0,0,0.8);
+		box-shadow:         inset 30px 30px 85px rgba(0,0,0,0.8);
 		display: flex
+		justify-content: flex-end
 		flex-direction: column
-		.data-author
-			font-size: 14px
-			color: #B0B0B0
-		.content-single
-			min-height: 340px
-			// background-size: cover
-			// background-position: center
-			-webkit-box-shadow: inset 30px 30px 85px rgba(0,0,0,0.8);
-			-moz-box-shadow:    inset 30px 30px 85px rgba(0,0,0,0.8);
-			box-shadow:         inset 30px 30px 85px rgba(0,0,0,0.8);
-			display: flex
-			justify-content: flex-end
-			flex-direction: column
-			.single-text
-				color: #fff
-				width: 100%
-				text-align: center
-				font-family: serif
-				.single-header
-					a
-						font-size: 48px
-						color: #fff
-						&:hover
-							text-decoration: none
-							opacity: 0.8
-							transition: opacity .40s ease
-				.single-description
-					font-size: 20px
-			.post-info
-				font-family: sans
-				//position: absolute
-				display: flex
-				//align-self: flex-end
-				width: 100%
-				justify-content: space-between
-				// padding-top: 3%
-				// padding-bottom: 3%
-				padding: 3% 4% 3% 0%;
-				.data-author
-					color: #B0B0B0
-			.data-author
-				font-size: 16px
-				color: #fff
-		.content-several, .content-single
-			//background-color: red
-			margin-bottom: 5%
-			.content-item
-				.cont-item-description
-					font-family: serif
-					line-height: 1.4
-					margin-top: 15px
-					margin-bottom: 15px
-					a
+		.single-text
+			color: #fff
+			width: 100%
+			text-align: center
+			font-family: sans
+			.single-header
+				a
+					font-size: 45px
+					color: #fff
+					&:hover, &:active, &:focus
 						text-decoration: none
-						color: #000
-						font-size: 22px // default 24px
-						&:hover
-							opacity: 0.8
-							transition: opacity .40s ease
-				.cont-item-image
-					//max-height: 245px
-					overflow: hidden
-					position: relative
-					display: flex
-					//opacity: 0.8
-					// background-size: cover
-					// background-position: center
-					//background-color: rgba(10, 11, 18, 0.8)
-
-					// img
-					// 	max-width: 100%
-					// 	max-height: 100%
-
-				.item-tag
-					position: absolute
-					align-self: flex-end
-					margin-top: -25px
-			.content-several
+						opacity: 0.8
+						transition: opacity .40s ease
+			.single-description
+				font-size: 19px
+		.post-info
+			font-family: sans
+			//position: absolute
+			display: flex
+			//align-self: flex-end
+			width: 100%
+			justify-content: space-between
+			// padding-top: 3%
+			// padding-bottom: 3%
+			padding: 3% 4% 3% 0%;
+			.data-author
+				color: #B0B0B0
+		.data-author
+			font-size: 16px
+			color: #fff
+	.content-several, .content-single
+		// display: flex
+		// justify-content: space-between
+		margin-bottom: 5%
+		.content-item
+			//padding: 0
+			.cont-item-description
+				font-family: sans
+				line-height: 1.4
+				margin-top: 15px
+				margin-bottom: 15px
+				a
+					text-decoration: none
+					color: #000
+					font-size: 20px // default 24px
+					&:hover
+						opacity: 0.8
+						transition: opacity .40s ease
+			.cont-item-image
+				//max-height: 245px
+				overflow: hidden
+				position: relative
 				display: flex
-				justify-content: space-around
+			.item-tag
+				position: absolute
+				align-self: flex-end
+				margin-top: -25px
+		.content-several
+			display: flex
+			justify-content: space-around
 .content-single
+	padding-left: 4%
+	padding-right: 4%
 	.cont-item-image
 		min-height: 350px
 
@@ -348,15 +350,17 @@ body
 	font-family: serif
 	// padding-top: 5%
 	// padding-bottom: 5%
-	min-height: 330px
+	min-height: 300px
 	display: flex
 	flex-direction: column
 	justify-content: center
 
 	.contact-header
-		font-size: 48px
+		font-size: 44px
 	.contact-description
-		font-size: 24px
+		font-size: 22px
+	.button
+		font-size: 16px
 
 .button
 	display: inline-block
@@ -386,16 +390,16 @@ body
 	display: flex
 	flex-direction: column
 	justify-content: center
-	min-height: 200px
+	min-height: 150px
 	color: #B0B0B0
 	text-align: center
 	font-family: sans
-	font-size: 18px
+	font-size: 15px
 	color: #B3B8C5
 	a
 		color: #A7ACBC
 		font-weight: bold
-		font-size: 19px
+		font-size: 16px
 		// &:hover
 		// 	text-decoration: none
 
